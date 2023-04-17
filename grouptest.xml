@@ -1,0 +1,20 @@
+<suite name="Regression Suite">
+	<test name="Grouping Test">
+		<groups>
+			<define name="all">
+				<include name="bike"/>
+				<include name="car"/>
+			</define>
+			<define name="nobike">
+				<include name="suv"/>
+				<include name="sedan"/>
+			</define>
+			<run>
+				<include name="all"/>				
+			</run>
+		</groups>
+		<classes>
+			<class name="com.thaoorg.thaoproj.GroupingTest" />			
+		</classes>		
+	</test>
+</suite>

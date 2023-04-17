@@ -1,0 +1,6 @@
+basepackage\BaseTestSuite.class
+com\thaoorg\thaoproj\GroupingTest.class
+facebook\SeleniumGrid_Parallel_LoginTest.class
+facebook\SeleniumGrid_LoginTest.class
+facebook\LoginTest.class
+pages\FaceBookLoginPageFactory.class
