@@ -1,6 +1,5 @@
-basepackage\BaseTestSuite.class
-com\thaoorg\thaoproj\GroupingTest.class
-facebook\SeleniumGrid_Parallel_LoginTest.class
-facebook\SeleniumGrid_LoginTest.class
-facebook\LoginTest.class
+pages\LoginPageFactory_WithGrid.class
+cucumber\runners\TestNG_Test.class
 pages\FaceBookLoginPageFactory.class
+cucumber\runners\TestRun.class
+saucelab\NewTest.class

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Extent Report Testing]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="Test with Firefox(failed)">
+    <classes>
+      <class name="extentreport.ExtentReport2">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testLogin1"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- extentreport.ExtentReport2 -->
+      <class name="extentreport.ExtentReport1">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+          <include name="testLogin"/>
+        </methods>
+      </class> <!-- extentreport.ExtentReport1 -->
+    </classes>
+  </test> <!-- Test with Firefox(failed) -->
+</suite> <!-- Failed suite [Extent Report Testing] -->

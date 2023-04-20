@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="cucumber.runners.TestNG_Test">
+      <class name="facebook.LoginTest_DataProvider">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="1"/>
-          <include name="tearDownClass"/>
+          <include name="testLogin"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- cucumber.runners.TestNG_Test -->
+      </class> <!-- facebook.LoginTest_DataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

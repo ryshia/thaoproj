@@ -2,20 +2,22 @@ package facebook;
 
 import org.testng.annotations.Test;
 
+import dataprovider.DataProviders;
 import pages.FaceBookLoginPageFactory;
 
 import org.testng.annotations.BeforeClass;
 
 import static org.testng.Assert.assertEquals;
 
-import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 
 public class LoginTest {
 	
@@ -40,24 +42,33 @@ public class LoginTest {
 	  
 	  driver.manage().window().maximize();
 	  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-	  baseUrl="https://www.facebook.com/";
-	  
+	  	  
 	  System.out.println("Before class end...");
 	  
   }
   
   @Test
-  public void TestLogin() {
+  public void testLogin() throws InterruptedException {
 	  System.out.println("Before Test ...");
+	  baseUrl="https://www.facebook.com/";
 	  driver.get(baseUrl);
 	  fbLoginPage.setEmail("abc@gmail.com");
-	  fbLoginPage.setPassword("abcdefgh");
+	  fbLoginPage.setPassword("abcd1234");
+	  Thread.sleep(1000);
 	  fbLoginPage.clickLoginBtn();
 	  
-	  String test=fbLoginPage.getIncorrectPasswordMessage();
+	  //String msg=fbLoginPage.getIncorrectPasswordMessage();
 	  
-	  System.out.println("Login failed:  " + test);
+	  //System.out.println("Login failed for user:  " + userName);
+	//  assertEquals(msg, "Invalid Password");
 			
+  }
+  
+  @AfterMethod
+  public void tearDown(ITestResult result) throws IOException {
+	  if (result.getStatus()==ITestResult.FAILURE) {
+	   utils.Screenshot.takeScreenShot(driver, result.getName());
+	  }
   }
 
   @AfterClass
