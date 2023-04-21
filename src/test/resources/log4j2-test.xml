@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+		<Property name="basePath">./logs</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="File" fileName="${basePath}/app-test.log" filePattern="${basePath}/app-test-%d{yyyy-MM-dd}.log">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+				<SizeBasedTriggeringPolicy size="100 KB"/>
+			</Policies>
+		</RollingFile>
+		<Console name="Console">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="all">
+			<AppenderRef ref="File"/>
+		</Root>
+		<Logger name="log4jdemo" level="debug" additivity="false">
+			<AppenderRef ref="File"/>
+		</Logger>
+		<Logger name="log4jdemo2" level="all" additivity="false">
+			<AppenderRef ref="File"/>
+		</Logger>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,8 @@
+11:43:47.768 INFO  App -This is TRACE log from main package
+11:43:47.769 DEBUG App -This is DEBUG log from main package
+11:43:47.769 FATAL App -This is FATAL log from main package
+11:43:47.769 ERROR App -This is ERROR log from main package
+11:44:14.970 INFO  App -This is TRACE log from main package
+11:44:14.971 DEBUG App -This is DEBUG log from main package
+11:44:14.971 FATAL App -This is FATAL log from main package
+11:44:14.971 ERROR App -This is ERROR log from main package

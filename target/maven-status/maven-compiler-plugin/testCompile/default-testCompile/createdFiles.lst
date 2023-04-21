@@ -1,5 +1,0 @@
-pages\LoginPageFactory_WithGrid.class
-cucumber\runners\TestNG_Test.class
-pages\FaceBookLoginPageFactory.class
-cucumber\runners\TestRun.class
-saucelab\NewTest.class
